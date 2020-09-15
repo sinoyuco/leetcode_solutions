@@ -5,11 +5,14 @@ def combinationSum(candidates, target):
         if target < 0:
             return
         if target == 0:
+            print('idx',idx,'target',target,'right',right)
             result.append(right)
             return
         for i in range(idx, len(candidates)):
             dfs(i, target-candidates[i], right+[candidates[i]])
 
+            #dfs(0, 4, [1))
+            #dfs(1, 3, [2])
     dfs(0, target, [])
     return result
 
