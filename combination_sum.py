@@ -1,8 +1,6 @@
 def combinationSum(candidates, target):
     result = []
 
-    candidates = sorted(candidates)
-
     def dfs(idx, target, right):
         if target < 0:
             return
