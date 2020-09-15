@@ -1,4 +1,4 @@
-def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+def removeNthFromEnd(head,n)
     ahead = behind = head
     for i in range(n):
             ahead = ahead.next
@@ -9,6 +9,6 @@ def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
     while ahead.next:
         ahead = ahead.next
         behind = behind.next
-        
+
     behind.next = behind.next.next
     return head
