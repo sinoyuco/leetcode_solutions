@@ -1,9 +1,12 @@
 def numPlayers(k, scores):
     # Write your code here
     count = 0
-    a = sorted(scores)
+    a = sorted(scores, reverse=True)
     i = 1
     for j in range(len(a)):
+        if a[j] == 0:
+            break
+
         if j == 0:
             count += 1
         else:
@@ -12,12 +15,10 @@ def numPlayers(k, scores):
                 if i <= k:
                     count += 1
             else:
-                
+
                 i = j+1
                 if i <= k:
                     count += 1
-        print(i, a[j])
-
     return count
 
 
