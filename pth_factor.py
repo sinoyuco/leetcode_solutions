@@ -1,14 +1,10 @@
 def pthFactor(n, p):
     # Write your code here
-    i = 1
-    k = 0
-    while i <= n:
+    factors = []
+    for i in range(1, int(n**0.5)+1):
         if n % i == 0:
-            k += 1
+            factors += [i, n//i]
 
-        if k == p:
-            return i
-
-        i += 1
-
-    return 0
+    unique = sorted(list(set(factors)))
+    # print(unique)
+    return 0 if p > len(unique) else unique[p-1]
