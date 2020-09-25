@@ -15,8 +15,8 @@ def scatterPalindrome(str):
                     count+=1
 
         result.append(count)
-    return count
+    return result
 
 
-print(scatterPalindrome('abba'))
+print(scatterPalindrome(['abba', 'tacocat']))
             
