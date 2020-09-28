@@ -8,6 +8,7 @@ def numSubarrayProductLessThanK(nums, k):
             while product >= k:
                 start += 1
                 product //= nums[start]
+                print(f'prod is {product}')
             output += i-start
             print(nums[i], output)
         else:
