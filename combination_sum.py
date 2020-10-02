@@ -17,4 +17,4 @@ def combinationSum(candidates, target):
     return result
 
 
-print(combinationSum([1,2], 5))
+print(combinationSum([2,3,6,7], 7))
