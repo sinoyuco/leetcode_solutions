@@ -17,3 +17,5 @@ def stockPairs(stocksProfit, target):
         else:
             maps[stocksProfit[i]] = 0
     return count
+
+print(stockPairs([1,1,3,46,1,3,9], 47))
