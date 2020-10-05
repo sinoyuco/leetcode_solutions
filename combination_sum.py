@@ -5,7 +5,6 @@ def combinationSum(candidates, target):
         if target < 0:
             return
         if target == 0:
-            print('idx',idx,'target',target,'right',right)
             result.append(right)
             return
         for i in range(idx, len(candidates)):
