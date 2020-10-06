@@ -1,15 +1,11 @@
 class Solution:
     def reorderLogFiles(self, logs: List[str]) -> List[str]:
-        i = count = j = 0
-        while i <= len(logs) and j <= len(logs)-1:
-            splitted = logs[i].split()
-            if splitted[1].isalpha():
-                count+=1
-                a = logs[i]
-                del logs[i]
-                logs.insert(0,a)
-                i-=1
-                j-=1
-            i+=1
-            j+=1
-        return sorted(logs[:count], key=lambda x: x[5:])+logs[count:]
+       l = []
+       n = []
+       for i in logs:
+            splitted = i.split()
+            if splitted[1].isnumeric():
+                n.append(i)
+            else:
+                l.append(i)
+        return sorted(l, key=lambda x: [' '.join(x.split()[1:]), x.split()[0]]) + n
