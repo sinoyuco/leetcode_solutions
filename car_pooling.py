@@ -17,7 +17,7 @@ def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
     count = 0
     
     for i in range(start, end+1):
-        if i in maps:
+        if i in maps: zxgn bv
             count += maps[i]
         if count > capacity:
             return False
