@@ -1,16 +1,16 @@
 def countPairs(numbers, k):
     # Write your code here
-    count = 0
-    maps = {}
+    a = set()
     for i in range(len(numbers)):
-        if numbers[i] not in maps:
-            maps[numbers[i]] = True
-
-        if numbers[i]-k in maps and maps[numbers[i]-k]:
-            maps[numbers[i]-k] = False
-            count += 1
-        if numbers[i]+k in maps and maps[numbers[i]+k]:
-            maps[numbers[i]+k] = False
-            count += 1
-
+        cu = numbers[i]-k
+        if cu in a:
+            continue
+        else:
+            a.add(cu)
+    
+    count = 0
+    for i in range(len(numbers)):
+        if numbers[i] in a:
+            count+=1
+            a.remove(numbers[i])
     return count
