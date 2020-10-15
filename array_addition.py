@@ -13,5 +13,5 @@ def array_addition(arr):
 
     return dfs(target, arr)
 
-print(array_addition([1,8,6,2]))
+
 
