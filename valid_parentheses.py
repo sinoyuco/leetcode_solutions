@@ -1,16 +1,14 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        arr = []
-        maps = {'}': '{', ')': '(', ']': '['}
-        for i in s:
-            if i in maps:
-                if arr:
-                    t = arr.pop()
-                else:
-                    t = '#'
-
-                if maps[i] != t:
-                    return False
+        stack = []
+        maps = {'[':']', '{':'}', '(':')'}
+        for i in range(len(s)):
+            if s[i] in maps:
+                stack.append(maps[s[i]])
             else:
-                arr.append(i)
-        return True if len(arr) == 0 else False
+                if stack and s[i]==stack[-1]:
+                    stack.pop()
+                else:
+                    return False
+                   
+        return True if not stack else False
