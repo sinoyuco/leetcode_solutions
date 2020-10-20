@@ -11,3 +11,6 @@ class Solution:
                 if k > j:
                     result += (k-1-j)
         return result  
+
+        #[2, 2, 3, 4]
+        # i  j     k
