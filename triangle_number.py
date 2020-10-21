@@ -13,4 +13,4 @@ class Solution:
         return result  
 
         #[2, 2, 3, 4]
-        # i  j     k
+        # i     j  k

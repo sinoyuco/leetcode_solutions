@@ -22,3 +22,4 @@ class Solution(object):
                     temp.append(j+m)
             result = temp
         return result
+
