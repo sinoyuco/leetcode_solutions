@@ -6,8 +6,10 @@ class Solution:
             for j in range(len(dp[i])):
                 t = (dp[i][j]-1)/2
                 if t > 0:
+                    #populate the two glasses below it
                     dp[i+1][j] += t
                     dp[i+1][j+1] += t
 
         target = dp[query_row][query_glass]
+        # if overflowed already, just return 1
         return target if target < 1 else 1
