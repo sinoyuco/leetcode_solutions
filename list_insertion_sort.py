@@ -1,7 +1,7 @@
 class Solution:
     def insertionSortList(self, head: ListNode) -> ListNode:
 
-        curr, d = head, ListNode(-1)
+        curr, d = head, ListNode(0)
         while curr:
             temp, p, n = curr.next, d, d.next
             while n:
