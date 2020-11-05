@@ -16,4 +16,4 @@ def characters_with_highest_frequency(word):
             result = [k]
     return result
 
-print(characters_with_highest_frequency('ananin ami'))
+print(characters_with_highest_frequency('something'))
