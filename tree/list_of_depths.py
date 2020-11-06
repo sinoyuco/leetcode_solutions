@@ -13,14 +13,13 @@ def list_of_depths(root):
                 temp.append(el.left)
             if el.right:
                 temp.append(el.right)
-        
-        p1 = p = ListNode(l[0])
-        for i in range(1,len(l)):
-            a = ListNode(l[i])
-            p.next = a
-            p = p.next
-        
-        res.append(p1)
+        if l:
+            p1 = p = ListNode(l[0])
+            for i in range(1,len(l)):
+                a = ListNode(l[i])
+                p.next = a
+                p = p.next
+                res.append(p1)
         queue = temp
         
 
