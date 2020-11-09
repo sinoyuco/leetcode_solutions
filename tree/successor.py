@@ -1,6 +1,7 @@
 def findSuccessorNode(root):
     if not root:
         return None
+        
     if root.right:
         r = root.right
         while r.left:
@@ -13,4 +14,3 @@ def findSuccessorNode(root):
             a = par
             par = par.parent
         return par
-        
