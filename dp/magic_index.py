@@ -1,4 +1,5 @@
 class Solution:
+    #elements in array are distinct, sorted integers.
     def magic_index(self, arr):    
         return self.bs(arr, 0, len(arr)-1)
 
@@ -9,6 +10,8 @@ class Solution:
         if arr[mid] == mid:
             return mid:
         elif mid < arr[mid]:
-            return self.bs(arr, mid+1, end)
-        else:
+            #look at right subarray
             return self.bs(arr, start, mid-1)
+        else:
+            #look at left subarray
+            return self.bs(arr, mid+1, end) 
