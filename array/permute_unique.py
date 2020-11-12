@@ -12,4 +12,4 @@ class Solution:
         for c in rec_call:
             for i in range(len(c)+1):
                 result.add(tuple(c[:i]+[piv]+c[i:]))
-        return map(list, result)
+        return [*map(list, result)]
