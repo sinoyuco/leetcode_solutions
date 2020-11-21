@@ -11,3 +11,5 @@ def getSequenceSum(i, j, k):
         for y in range(k, j+1):
             s += 2*y
     return s-j
+
+
