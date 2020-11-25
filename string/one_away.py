@@ -13,7 +13,7 @@ def one_away(str1,str2):
             maps[str2[i]] = -1
 
     p = []
-    for k,v in maps.items():
+    for v in maps.values():
         if v!=0:
             if len(p)==2:
                 return False
