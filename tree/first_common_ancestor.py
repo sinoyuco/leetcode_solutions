@@ -11,5 +11,6 @@ class Solution:
                 nonlocal res
                 res = node
             return m or l or r
+            
         dfs(root)
         return res
