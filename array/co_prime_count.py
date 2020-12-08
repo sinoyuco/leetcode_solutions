@@ -13,5 +13,4 @@ def coprimeCount(A):
 
 
 print(coprimeCount([5,8,14]))
-# [4,4,6]
-# [1,2,3,4], []
+
