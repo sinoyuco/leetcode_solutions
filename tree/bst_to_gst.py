@@ -5,11 +5,16 @@ class Solution:
         def dfs(node):
             if not node:
                 return
+
             dfs(node.right)
+            
             nonlocal s
             n = node.val
             node.val += s
             s += n
+
             dfs(node.left)
+
             return node
+
         return dfs(root)
