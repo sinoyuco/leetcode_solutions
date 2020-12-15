@@ -1,6 +1,4 @@
 import collections
-
-
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         maps = collections.defaultdict(int)
