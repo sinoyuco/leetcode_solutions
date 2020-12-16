@@ -15,16 +15,14 @@ def candy_crush(input):
                 stack.append([input[i], 1])
         else:
             stack[-1][1] += 1
-
+        # print(stack)
     # handle end
     if stack[-1][1] >= 3:
         stack.pop()
 
-    out = []
-    for ltrs in stack:
-        out += ltrs[0] * ltrs[1]
+    res = ''.join([i[0]*i[1] for i in stack])
 
-    return ''.join(out)
+    return res
 
 
 print(candy_crush("aaaabbbc"))  # c
