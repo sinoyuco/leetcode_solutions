@@ -1,6 +1,7 @@
 class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
         f = s = math.inf
+        # linear
         for i in nums:
             if i <= f:
                 f = i
@@ -9,3 +10,5 @@ class Solution:
             else:
                 return True
         return False
+
+        
