@@ -19,3 +19,19 @@ class Solution:
                 l -= 1
             result.append(t)
         return result
+
+        import collections
+
+
+    # level order traversal - hackerrank
+    def dfs(node, depth):
+        if not node:
+            return
+        maps[depth].append(node.info)
+        dfs(node.left, depth+1)
+        dfs(node.right, depth+1)
+    dfs(root, 0)
+    res = []
+    for v in maps.values():
+        res.extend(v)
+    print(''.join([str(i)+' ' for i in res]))
