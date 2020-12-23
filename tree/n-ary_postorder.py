@@ -9,3 +9,14 @@ class Solution:
             res.append(node.val)
         dfs(root)
         return res
+
+        # iterative 
+        
+        # if not root:
+        #     return []
+        # stack = [root]
+        # while stack:
+        #     curr = stack.pop()
+        #     stack.extend(curr.children)
+        #     res.append(curr.val)
+        # return res[::-1]
