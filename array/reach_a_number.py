@@ -7,8 +7,8 @@ class Solution:
         target = abs(target)
         tot = step = 0
         while True:
-            if tot < target or (target-tot)%2 == 1:
-                step+=1
-                tot+=step
+            if tot < target or (target-tot) % 2 == 1:
+                step += 1
+                tot += step
             else:
                 return step
