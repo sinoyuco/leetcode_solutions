@@ -3,7 +3,7 @@ class Solution:
     def palindrome(self, array):
         maps = collections.Counter(array)
         found = False
-        for k, v in maps.items():
+        for v in maps.values():
             if v % 2 == 1:
                 if found:
                     return False
