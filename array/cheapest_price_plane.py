@@ -23,6 +23,4 @@ class Solution:
             return res
 
         result = dfs(src, dst, K)
-        print(self.maps)
-        print(self.costs)
         return result if result != math.inf else -1
