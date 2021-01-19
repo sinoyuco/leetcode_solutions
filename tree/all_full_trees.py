@@ -1,5 +1,7 @@
 class Solution:
     def allPossibleFBT(self, N: int) -> List[TreeNode]:
+        if N % 2 == 0:
+            return []
         self.memo = {0: [], 1: [TreeNode(0)]}
 
         def dfs(num):
