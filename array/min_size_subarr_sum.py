@@ -8,5 +8,4 @@ class Solution:
                 res = min(res, (i+1)-l)
                 sumval -= nums[l]
                 l += 1
-
         return res if res != math.inf else 0
