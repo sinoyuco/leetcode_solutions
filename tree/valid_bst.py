@@ -16,16 +16,27 @@ class Solution:
         #         return False
         # return True
 
-        def dfs(node, lower, upper):
-            if not node:
-                return True
-            if node.val <= lower or node.val >= upper:
-                return False
+        # def dfs(node, lower, upper):
+        #     if not node:
+        #         return True
+        #     if node.val <= lower or node.val >= upper:
+        #         return False
 
-            if not dfs(node.right, node.val, upper):
-                return False
-            if not dfs(node.left, lower, node.val):
-                return False
+        #     if not dfs(node.right, node.val, upper):
+        #         return False
+        #     if not dfs(node.left, lower, node.val):
+        #         return False
+        #     return True
+
+        # return dfs(root, -math.inf, math.inf)
+
+        def dfs(node, l, r):
+        if not node:
             return True
+        if node.data <= l or node.data >= r:
+            return False
+        recl, recr = dfs(node.left, l, node.data), dfs(
+            node.right, node.data, r)
+        return recl and recr
 
         return dfs(root, -math.inf, math.inf)
