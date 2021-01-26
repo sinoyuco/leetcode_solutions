@@ -15,8 +15,6 @@ def candy_crush(input):
                 stack.append([input[i], 1])
         else:
             stack[-1][1] += 1
-        # print(stack)
-    # handle end
     if stack[-1][1] >= 3:
         stack.pop()
 
